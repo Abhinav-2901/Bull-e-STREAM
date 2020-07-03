@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% for row in data1 %}
+  <title>{{row[1]}} Health</title>
+  {% endfor %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% for row in data3 %}
+  <meta name="keywords" conten="{{row[1]}}">
+  {% endfor %}
+
+  {% for row in data4 %}
+  <meta name="description" conten="{{row[1]}}">
+  {% endfor %}
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+  <link href="{{ url_for('static', filename='css/jquery.mb.YTPlayer.min.css') }}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    
+    {% for row in data1 %}
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="/" class="site-logo">
+              {{row[1]}}
+            </a>
+{% endfor %}
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="col-12 col-lg-6 ml-auto d-flex">
+            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+              <a href="https://www.facebook.com/abhinav.chauhan.3348" target="_blank" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+              <a href="https://www.instagram.com/_most_.wanted_.munda_/" target="_blank" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+            
+
+            
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+            
+          </div>
+        </div>
+      </div>
+      
+
+
+      
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                <li class="active">
+                  <a href="/" class="nav-link text-left">Home</a>
+                  </li>
+                  <li>
+                    <a href="/technology/Technology" class="nav-link text-left">Technology</a>
+                  </li>
+                  <li>
+                    <a href="/sports/Sports" class="nav-link text-left">Sports</a>
+                  </li>
+                  <li>
+                    <a href="/business/Business" class="nav-link text-left">Business</a>
+                  </li>
+                  <li>
+                    <a href="/health/Health" class="nav-link text-left">Health</a>
+                  </li>
+                  <li><a href="/science/Science" class="nav-link text-left">Science</a></li>
+                  <li>
+                    <a href="/entertainment/Entertainment" class="nav-link text-left">Entertainment</a>
+                  </li>
+                  <li><a href=/contact class="nav-link text-left">Contact</a></li>
+
+              </ul>                                                                                                                                                                                                                                                                                         
+            </nav>
+
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+    
+    </div>
+
+    
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="section-title">
+              <h2>{{content}}</h2>
+            </div>
+
+            {% for news, desc, img, by, time in context %}
+            <div class="post-entry-2 d-flex">
+              <div class="thumbnail order-md-2" style="background-image: url('{{img}}')"></div>
+              <div class="contents order-md-1 pl-0">
+                <h2><a href="/healthpost/{{time}}">{{news}}</a></h2>
+                
+                <div class="post-meta">
+                  <span class="d-block"><p>{{by}}</p>
+                  <span class="date-read">{{time}}<span class="mx-1">&bullet;</span><span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+      </div>
+    </div>
+
+    
+
+
+    
+    <div class="footer">
+      <div class="container">
+        
+
+        {% for row in data2 %}
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | {{row[1]}} by Developer Crew
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.mb.YTPlayer.min.js') }}"></script>
+
+
+
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
